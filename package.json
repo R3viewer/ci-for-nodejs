@@ -1,0 +1,52 @@
+{
+  "name": "ci-for-nodejs",
+  "version": "1.0.0",
+  "description": "Example nodejs Project for the articles series \"CI for NodeJS\"",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "npx babel-node src/index.js",
+    "lint": "eslint ./src/**/*.js",
+    "test": "jest",
+    "build": "npm run _clean:dist && npx babel src --out-dir dist",
+    "_clean:dist": "npx rimraf --no-glob ./dist",
+    "start": "node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R3viewer/ci-for-nodejs.git"
+  },
+  "keywords": [
+    "blog",
+    "ci",
+    "nodejs",
+    "skills",
+    "gitlab"
+  ],
+  "author": "Guillaume Perez <contact@guillaumeperez.fr>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R3viewer/ci-for-nodejs/issues"
+  },
+  "homepage": "https://github.com/R3viewer/ci-for-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.4.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.4.0",
+    "rimraf": "^3.0.2"
+  }
+}
